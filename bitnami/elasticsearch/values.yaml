@@ -11,7 +11,7 @@ global:
   ##
   coordinating:
     name: coordinating-only
-  kibanaEnabled: false
+  kibanaEnabled: true
 
 ## Bitnami Elasticsearch image version
 ## ref: https://hub.docker.com/r/bitnami/elasticsearch/tags/
@@ -320,7 +320,7 @@ master:
       - ReadWriteOnce
     ## Persistent Volume size
     ##
-    size: 8Gi
+    size: 2Gi
 
   ## Service parameters for master-eligible node(s)
   ##
@@ -580,7 +580,7 @@ data:
     #   memory: 2176Mi
     requests:
       cpu: 25m
-      memory: 2048Mi
+      memory: 512Mi
   ## Elasticsearch data container's liveness and readiness probes
   ## ref: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#container-probes
   ##
@@ -632,7 +632,7 @@ data:
       - ReadWriteOnce
     ## Persistent Volume size
     ##
-    size: 8Gi
+    size: 2Gi
   ## Provide functionality to use RBAC
   ##
   serviceAccount:
