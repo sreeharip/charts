@@ -1114,8 +1114,3 @@ metrics:
 
 ## Bundled Kibana parameters
 ##
-kibana:
-  elasticsearch:
-    hosts:
-      - '{{ include "elasticsearch.coordinating.fullname" . }}'
-    port: 9200
